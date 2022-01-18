@@ -15,10 +15,12 @@ ticker_Data = yf.Ticker(ticker_symbol)
 ticker_Df = ticker_Data.history(period="id", start='2010-5-31', end="2022-5-31")
 
 st.write("""
-
-
+## Closing Price
 
 """)
 st.line_chart(ticker_Df.Close)
+st.write("""
+## Volume Price
+""")
 st.line_chart(ticker_Df.Volume)
-st.line_chart(ticker_Df.Dividends)
+
